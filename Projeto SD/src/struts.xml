@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The core configuration file for the framework is the default (struts.xml) file
+and should reside on the classpath of the webapp (generally /WEB-INF/classes). -->
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+  <!-- devMode equals debug information and reload everything for every request -->
+  <constant name="struts.devMode" value="true" />
+  <constant name="struts.ui.theme" value="simple" />
+
+  <package name="primes" extends="struts-default">
+	
+	<default-action-ref name="index" />
+	
+	<global-results>
+		<result name="error">/error.jsp</result>
+	</global-results>
+
+	<!-- all exceptions not caught by the application will lead to error.jsp -->
+	<global-exception-mappings>
+		<exception-mapping exception="java.lang.Exception" result="error" />
+	</global-exception-mappings>
+
+	<!-- 'index' action leads to the view provided by index.jsp -->
+    <action name="index">
+      <result>/index.jsp</result>
+    </action>
+
+	<!-- 'primes' action calls 'execute' in 'PrimesAction', followed by the view in 'primes.jsp' -->
+    <action name="pesquisa_word" class="projeto.action.PesquisaAction" method="pesquisar">
+      <result name="success">/pesquisa.jsp</result>
+  </action>
+      <action name="pesquisa_word_admin" class="projeto.action.PesquisaAction" method="pesquisar">
+          <result name="success">/pesquisa_admin.jsp</result>
+      </action>
+      <action name="pesquisa_word_user" class="projeto.action.PesquisaAction" method="pesquisar">
+          <result name="success">/pesquisa_user.jsp</result>
+      </action>
+      <action name="pesquisa_url" class="projeto.action.PesquisaAction" method="pesquisar_url">
+          <result name="success">/pesquisa_url.jsp</result>
+      </action>
+      <action name="pesquisa_url_admin" class="projeto.action.PesquisaAction" method="pesquisar_url">
+          <result name="success">/pesquisa_url_admin.jsp</result>
+      </action>
+      <action name="pesquisa_url_user" class="projeto.action.PesquisaAction" method="pesquisar_url">
+          <result name="success">/pesquisa_url_user.jsp</result>
+      </action>
+
+
+      <action name="login" class="projeto.action.PesquisaAction" method="login">
+          <result name="admin">/menu_admin.jsp</result>
+          <result name="user">/menu_user.jsp</result>
+          <result name="fail">/loginerror.jsp</result>
+      </action>
+
+      <action name = "registar" class="projeto.action.PesquisaAction" method="registo">
+          <result name="username_invalido">/registoerror.jsp</result>
+          <result name="username_curto">/registoerror3.jsp</result>
+          <result name="nome_invalido">/registoerror2.jsp</result>
+          <result name="success">/login.jsp</result>
+          <result name="fail">/registo.jsp</result>
+
+
+      </action>
+      <action name="logout" class="projeto.action.PesquisaAction" method="logout">
+          <result name="success">/index.jsp</result>
+      </action>
+      <action name="anexar" class="projeto.action.PesquisaAction" method="anexar">
+          <result name="success">/menu_admin.jsp</result>
+      </action>
+      <action name="privilegio" class="projeto.action.PesquisaAction" method="privilegios">
+          <result name="success">/menu_admin.jsp</result>
+          <result name="fail">/privilegioserror.jsp</result>
+      </action>
+      <action name="callback" class="projeto.action.CallbackAction" method="execute">
+          <result type="redirect">${url}</result>
+      </action>
+      <action name="facebook_action" class="projeto.action.FacebookAction" method="execute">
+          <result name="success">/login.jsp</result>
+          <result name="username_invalido">/registoerror.jsp</result>
+      </action>
+
+
+      <action name="callback_login" class="projeto.action.LoginCallbackAction" method="execute">
+          <result type="redirect">${url}</result>
+      </action>
+      <action name="facebooklogin_action" class="projeto.action.LoginFacebookAction" method="execute">
+          <result name="admin">/menu_admin.jsp</result>
+          <result name="user">/menu_user.jsp</result>
+          <result name="fail">/loginerror.jsp</result>
+      </action>
+
+
+
+
+
+
+  </package>
+
+</struts>

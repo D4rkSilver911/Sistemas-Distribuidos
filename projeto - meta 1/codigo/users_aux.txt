@@ -1,0 +1,7 @@
+:1:1:Gabriel:gabyns:12345: : 
+:2:1:Carlos Lima:carlos:1234: : 
+:3:0:Joao Carlos:jc1999:1111: : 
+:4:0:Tiago Sousa:tiago1:123456: : 
+:5:0:Antonio Maria:antonio:2222: : 
+:6:1:Diogo Paula:diogo:1222: : 
+:7:0:Rodrigo:rodri:3333: : 

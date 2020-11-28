@@ -1,0 +1,53 @@
+#login{
+    position: absolute;
+    margin-left: -172px;
+    margin-top: 130px;
+    height: 50px;
+    width: 175px;
+    border-radius: 12px;
+    border-color:black;
+    cursor:pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #434dd9;
+}
+input{
+    border-radius: 12px; height:50px; padding-top: 5px; padding-left: 10px; border-color:black;
+    font-size: 18px;
+    vertical-align: top;
+}
+div.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: Helvetica, sans-serif;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+#anexo, #voltar{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 40px;
+    height: 50px;
+    width: 175px;
+    border-radius: 12px;
+    border-color:black;
+    cursor:pointer;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #434dd9;
+}
+#voltar{
+    margin-top: 10px;
+    margin-left: 230px;
+}

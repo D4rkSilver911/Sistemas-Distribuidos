@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Projeto SD:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Projeto_SD_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Projeto SD/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Projeto SD" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="async-http-client-1.9.31" />
+          <element id="library" level="project" name="json_simple-1.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
